@@ -3,14 +3,10 @@ import ButtonBack from '../components/ButtonBack';
 import GetSinglePost from '../service/GetSinglePost';
 
 const SinglePost = () => {
-    const [title, setTitle] = useState('');
     const { post } = GetSinglePost();
 
     useEffect(() => {
-        setTitle(title);
-        setTimeout(() => {
-            document.title = `${post.title}`;
-        }, 1000);
+        document.title = `${post.title}`;
     }, []);
 
     return (
