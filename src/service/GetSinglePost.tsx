@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const GetSinglePost = () => {
-    const [data, setData] = useState<any>({});
+    const [post, setPost] = useState<any>({});
     const [loading, setLoading] = useState(true);
 
     const BASE_URL = axios.create({
@@ -14,8 +14,8 @@ const GetSinglePost = () => {
 
     const getPost = async () => {
         try {
-            const { data } = await BASE_URL.get(`/posts/${params.id}`);
-            setData(data);
+            const post = await BASE_URL.get(`/posts/${params.id}`);
+            setPost(post.data);
         } catch (error) {
             console.error(error);
         }
@@ -27,7 +27,7 @@ const GetSinglePost = () => {
     }, []);
 
     return {
-        data,
+        post,
         loading,
     };
 };

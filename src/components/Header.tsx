@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = (props: any) => {
@@ -6,9 +6,8 @@ const Header = (props: any) => {
         name: '<Header/>',
     };
 
-    useEffect(() => {
-        console.log(`Hello from: ${props.name}`);
-    }, []);
+    console.log(`Hello from: ${props.name}`);
+
     return (
         <>
             <header>

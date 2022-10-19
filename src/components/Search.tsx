@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Search = ({
     props,
@@ -27,9 +27,7 @@ const Search = ({
         name: '<Search/>',
     };
 
-    useEffect(() => {
-        console.log(`Hello from: ${props.name}`);
-    }, []);
+    console.log(`Hello from: ${props.name}`);
 
     return (
         <div>

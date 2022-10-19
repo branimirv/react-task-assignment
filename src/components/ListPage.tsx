@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Post from './Post';
 
 const ListPage = ({
@@ -14,9 +14,7 @@ const ListPage = ({
         name: '<ListPage/>',
     };
 
-    useEffect(() => {
-        console.log(`Hello from: ${props.name}`);
-    }, []);
+    console.log(`Hello from: ${props.name}`);
 
     const getPostsAndComments = searchResults.map((post: any) => {
         const filteredComments = comments.filter(
