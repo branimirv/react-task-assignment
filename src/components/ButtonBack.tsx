@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ButtonBack = (props: any) => {
@@ -8,7 +8,9 @@ const ButtonBack = (props: any) => {
         name: '<BackButton/>',
     };
 
-    console.log(`Hello from: ${props.name}`);
+    useEffect(() => {
+        console.log(`Hello from: ${props.name}`);
+    }, []);
 
     return (
         <button

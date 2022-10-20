@@ -14,9 +14,7 @@ const Post = ({
         name: '<Post/>',
     };
 
-    useEffect(() => {
-        console.log(`Hello from: ${props.name}`);
-    }, []);
+    console.log(`Hello from: ${props.name}`);
 
     return (
         <Link to={`/post/${post.id}`} className="post block">

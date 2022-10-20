@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Search = ({
     props,
@@ -9,6 +9,14 @@ const Search = ({
     posts: any;
     setSearchResults: any;
 }) => {
+    props = {
+        name: '<Search/>',
+    };
+
+    useEffect(() => {
+        console.log(`Hello from: ${props.name}`);
+    }, []);
+
     const handleSubmit = (e: any) => e.preventDefault();
 
     const handleSearchChange = (e: any) => {
@@ -22,12 +30,6 @@ const Search = ({
 
         setSearchResults(resultsArray);
     };
-
-    props = {
-        name: '<Search/>',
-    };
-
-    console.log(`Hello from: ${props.name}`);
 
     return (
         <div>
